@@ -1,0 +1,18 @@
+int valor;
+void setup() {
+  Serial.begin(9600);
+  pinMode(A0, INPUT);
+   pinMode(13, OUTPUT);
+}
+
+void loop() {
+ valor = analogRead(A0);
+ if (valor < 200)
+   digitalWrite(13, true);
+   else
+   digitalWrite(13,false);
+ Serial.println(valor);
+ delay(100);
+}
+
+    //acender a luz do led se a luminosidade for baixa.
